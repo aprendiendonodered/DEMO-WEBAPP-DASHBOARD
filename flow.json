@@ -31,21 +31,73 @@
             "3569b378.05d7ac",
             "f99d83cc.b54df",
             "49d71834.096548",
-            "abbb2a40.b43368"
+            "abbb2a40.b43368",
+            "3fd102daf6ff4686",
+            "fb2c3c73fe49f236"
         ],
-        "x": 114,
-        "y": 319,
+        "x": 34,
+        "y": 19,
         "w": 692,
-        "h": 202
+        "h": 282
+    },
+    {
+        "id": "f00a6ab86a2597c6",
+        "type": "group",
+        "z": "2352537bc9428508",
+        "name": "Control Pestañas",
+        "style": {
+            "fill": "#ffffbf",
+            "label": true
+        },
+        "nodes": [
+            "5949b815ac7f64dd",
+            "48655d5777553db3",
+            "1d05bbc77848e7f7",
+            "dade04e06ae2cee3",
+            "1a7748e2931bdee0",
+            "0e8e30bf946cc9b6",
+            "5c789da27e3dbf77"
+        ],
+        "x": 154,
+        "y": 319,
+        "w": 572,
+        "h": 162
+    },
+    {
+        "id": "b2fc27ff784f01f7",
+        "type": "group",
+        "z": "2352537bc9428508",
+        "name": "Datos Mostrados",
+        "style": {
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "c046541ae1d08348",
+            "bc7860167cfe162a",
+            "bd4dc346747a750c",
+            "a2db8eb812864f1a",
+            "beda49c6852b6a19",
+            "9a17e4f2fada4933",
+            "57b51ea035dc0916",
+            "8742013246bfab5d",
+            "650f185550fe0ba8",
+            "941bbe3ced196876",
+            "3d1f2f68e7b51efb"
+        ],
+        "x": 14,
+        "y": 499,
+        "w": 492,
+        "h": 282
     },
     {
         "id": "42215532dc65ce87",
         "type": "ui_tab",
         "name": "CPU",
         "icon": "computer",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
+        "order": 2,
+        "disabled": true,
+        "hidden": true
     },
     {
         "id": "1466bdc5ae19116f",
@@ -128,7 +180,7 @@
         "site": {
             "name": "Webapp Demo",
             "hideToolbar": "false",
-            "allowSwipe": "false",
+            "allowSwipe": "true",
             "lockMenu": "false",
             "allowTempTheme": "true",
             "dateFormat": "DD/MM/YYYY",
@@ -160,9 +212,9 @@
         "type": "ui_tab",
         "name": "Temperatura",
         "icon": "fa-thermometer-full",
-        "order": 2,
-        "disabled": false,
-        "hidden": false
+        "order": 3,
+        "disabled": true,
+        "hidden": true
     },
     {
         "id": "7a45d1ee681c2eb1",
@@ -188,15 +240,66 @@
         "id": "f71dee08.232e9",
         "type": "ui_tab",
         "name": "Button Panel",
-        "icon": "dashboard"
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "12869ceda2bb695f",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "enriquecrespo.com",
+        "port": "8883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "170034691a8d544e",
+        "type": "ui_tab",
+        "name": "Salir",
+        "icon": "exit_to_app",
+        "order": 4,
+        "disabled": true,
+        "hidden": true
+    },
+    {
+        "id": "af6301dfb8f3cde3",
+        "type": "ui_group",
+        "name": "Exit",
+        "tab": "170034691a8d544e",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "c046541ae1d08348",
         "type": "ui_gauge",
         "z": "2352537bc9428508",
+        "g": "b2fc27ff784f01f7",
         "name": "",
         "group": "6974c20bef22822c",
-        "order": 0,
+        "order": 1,
         "width": 0,
         "height": 0,
         "gtype": "gage",
@@ -204,26 +307,27 @@
         "label": "units",
         "format": "{{value}}",
         "min": 0,
-        "max": 10,
+        "max": "100",
         "colors": [
             "#00b500",
             "#e6e600",
             "#ca3838"
         ],
-        "seg1": "",
-        "seg2": "",
+        "seg1": "50",
+        "seg2": "75",
         "className": "",
-        "x": 530,
-        "y": 160,
+        "x": 410,
+        "y": 700,
         "wires": []
     },
     {
         "id": "bc7860167cfe162a",
         "type": "ui_gauge",
         "z": "2352537bc9428508",
+        "g": "b2fc27ff784f01f7",
         "name": "",
         "group": "7a45d1ee681c2eb1",
-        "order": 0,
+        "order": 1,
         "width": 0,
         "height": 0,
         "gtype": "gage",
@@ -231,17 +335,17 @@
         "label": "units",
         "format": "{{value}}",
         "min": 0,
-        "max": 10,
+        "max": "80",
         "colors": [
             "#00b500",
             "#e6e600",
             "#ca3838"
         ],
-        "seg1": "",
-        "seg2": "",
+        "seg1": "40",
+        "seg2": "60",
         "className": "",
-        "x": 530,
-        "y": 240,
+        "x": 410,
+        "y": 620,
         "wires": []
     },
     {
@@ -254,12 +358,14 @@
         "order": 1,
         "width": "2",
         "height": "2",
-        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '1' })\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-1\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">1</text>\n </g>\n</svg>\n</md-button>\n",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:transparent\" ng-click=\"send({payload: '1' })\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 260 260\">\n <g id=\"Key-1\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"15\" ry=\"15\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">1</text>\n </g>\n</svg>\n</md-button>\n",
         "storeOutMessages": false,
         "fwdInMessages": false,
+        "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 190,
-        "y": 360,
+        "className": "",
+        "x": 110,
+        "y": 100,
         "wires": [
             [
                 "49d71834.096548"
@@ -276,12 +382,14 @@
         "order": 6,
         "width": "2",
         "height": "2",
-        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '6'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-6\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">6</text>\n </g>\n</svg>\n</md-button>",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:transparent\" ng-click=\"send({payload: '6'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 260 260\">\n <g id=\"Key-6\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">6</text>\n </g>\n</svg>\n</md-button>",
         "storeOutMessages": false,
         "fwdInMessages": false,
+        "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 470,
-        "y": 400,
+        "className": "",
+        "x": 390,
+        "y": 140,
         "wires": [
             [
                 "49d71834.096548"
@@ -298,12 +406,14 @@
         "order": 3,
         "width": "2",
         "height": "2",
-        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '3' })\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-3\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">3</text>\n </g>\n</svg>\n</md-button>",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:transparent\" ng-click=\"send({payload: '3' })\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 260 260\">\n <g id=\"Key-3\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">3</text>\n </g>\n</svg>\n</md-button>",
         "storeOutMessages": false,
         "fwdInMessages": false,
+        "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 470,
-        "y": 360,
+        "className": "",
+        "x": 390,
+        "y": 100,
         "wires": [
             [
                 "49d71834.096548"
@@ -320,12 +430,14 @@
         "order": 4,
         "width": "2",
         "height": "2",
-        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '4'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-4\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">4</text>\n </g>\n</svg>\n</md-button>",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:transparent\" ng-click=\"send({payload: '4'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 260 260\">\n <g id=\"Key-4\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">4</text>\n </g>\n</svg>\n</md-button>",
         "storeOutMessages": false,
         "fwdInMessages": false,
+        "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 190,
-        "y": 400,
+        "className": "",
+        "x": 110,
+        "y": 140,
         "wires": [
             [
                 "49d71834.096548"
@@ -342,12 +454,14 @@
         "order": 5,
         "width": "2",
         "height": "2",
-        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '5'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-5\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">5</text>\n </g>\n</svg>\n</md-button>",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:transparent\" ng-click=\"send({payload: '5'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 260 260\">\n <g id=\"Key-5\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">5</text>\n </g>\n</svg>\n</md-button>",
         "storeOutMessages": true,
         "fwdInMessages": true,
+        "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 330,
-        "y": 400,
+        "className": "",
+        "x": 250,
+        "y": 140,
         "wires": [
             [
                 "49d71834.096548"
@@ -364,12 +478,14 @@
         "order": 7,
         "width": "2",
         "height": "2",
-        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '7'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-7\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">7</text>\n </g>\n</svg>\n</md-button>",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:transparent\" ng-click=\"send({payload: '7'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 260 260\">\n <g id=\"Key-7\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">7</text>\n </g>\n</svg>\n</md-button>",
         "storeOutMessages": false,
         "fwdInMessages": false,
+        "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 190,
-        "y": 440,
+        "className": "",
+        "x": 110,
+        "y": 180,
         "wires": [
             [
                 "49d71834.096548"
@@ -386,12 +502,14 @@
         "order": 2,
         "width": "2",
         "height": "2",
-        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '2' })\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-2\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">2</text>\n </g>\n</svg>\n</md-button>",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:transparent\" ng-click=\"send({payload: '2' })\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 260 260\">\n <g id=\"Key-2\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">2</text>\n </g>\n</svg>\n</md-button>",
         "storeOutMessages": false,
         "fwdInMessages": false,
+        "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 330,
-        "y": 360,
+        "className": "",
+        "x": 250,
+        "y": 100,
         "wires": [
             [
                 "49d71834.096548"
@@ -408,12 +526,14 @@
         "order": 8,
         "width": "2",
         "height": "2",
-        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '8'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-8\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">8</text>\n </g>\n</svg>\n</md-button>",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:transparent\" ng-click=\"send({payload: '8'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 260 260\">\n <g id=\"Key-8\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">8</text>\n </g>\n</svg>\n</md-button>",
         "storeOutMessages": false,
         "fwdInMessages": false,
+        "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 330,
-        "y": 440,
+        "className": "",
+        "x": 250,
+        "y": 180,
         "wires": [
             [
                 "49d71834.096548"
@@ -430,12 +550,14 @@
         "order": 9,
         "width": "2",
         "height": "2",
-        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '9'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-9\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">9</text>\n </g>\n</svg>\n</md-button>",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:transparent\" ng-click=\"send({payload: '9'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 260 260\">\n <g id=\"Key-9\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">9</text>\n </g>\n</svg>\n</md-button>",
         "storeOutMessages": false,
         "fwdInMessages": false,
+        "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 470,
-        "y": 440,
+        "className": "",
+        "x": 390,
+        "y": 180,
         "wires": [
             [
                 "49d71834.096548"
@@ -452,12 +574,14 @@
         "order": 10,
         "width": "2",
         "height": "2",
-        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '*'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-Reset\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\">\n    <title>Reset</title>\n  </rect>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"50\" y=\"250\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 250px; font-family: Arial;\">*</text>\n </g>\n</svg>\n</md-button>",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:transparent\" ng-click=\"send({payload: '*'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 260 260\">\n <g id=\"Key-Reset\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\">\n    <title>Reset</title>\n  </rect>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"50\" y=\"250\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 250px; font-family: Arial;\">*</text>\n </g>\n</svg>\n</md-button>",
         "storeOutMessages": false,
         "fwdInMessages": false,
+        "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 190,
-        "y": 480,
+        "className": "",
+        "x": 110,
+        "y": 220,
         "wires": [
             [
                 "49d71834.096548"
@@ -474,12 +598,14 @@
         "order": 11,
         "width": "2",
         "height": "2",
-        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '0'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-0\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">0</text>\n </g>\n</svg>\n</md-button>",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:transparent\" ng-click=\"send({payload: '0'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 260 260\">\n <g id=\"Key-0\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">0</text>\n </g>\n</svg>\n</md-button>",
         "storeOutMessages": false,
         "fwdInMessages": false,
+        "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 330,
-        "y": 480,
+        "className": "",
+        "x": 250,
+        "y": 220,
         "wires": [
             [
                 "49d71834.096548"
@@ -496,12 +622,14 @@
         "order": 12,
         "width": "2",
         "height": "2",
-        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '#'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-Enter\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\">\n    <title>Enter</title>\n  </rect>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">#</text>\n </g>\n</svg>\n</md-button>",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:transparent\" ng-click=\"send({payload: '#'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 260 260\">\n <g id=\"Key-Enter\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\">\n    <title>Enter</title>\n  </rect>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">#</text>\n </g>\n</svg>\n</md-button>",
         "storeOutMessages": true,
         "fwdInMessages": true,
+        "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 470,
-        "y": 480,
+        "className": "",
+        "x": 390,
+        "y": 220,
         "wires": [
             [
                 "49d71834.096548"
@@ -512,6 +640,7 @@
         "id": "f99d83cc.b54df",
         "type": "ui_text",
         "z": "2352537bc9428508",
+        "d": true,
         "g": "53497c9abd8bb944",
         "group": "d4851ecc.b4b53",
         "order": 13,
@@ -521,8 +650,9 @@
         "label": "Number:",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 690,
-        "y": 360,
+        "className": "",
+        "x": 610,
+        "y": 60,
         "wires": []
     },
     {
@@ -531,17 +661,22 @@
         "z": "2352537bc9428508",
         "g": "53497c9abd8bb944",
         "name": "code entry",
-        "func": "var key = msg.payload;\nvar out = context.get(\"code\") || \"\";\n\nif (key === \"#\") {\n    key = \"\"; // send code\n}\nelse if (key === \"*\") {\n    key = \"\"; // reset code\n    out = \"\";\n}\nelse if (!isNaN(+key)) {\n    out += key; // append key\n}\ncontext.set(\"code\", key ? out : undefined);\n\n// output #1: keys entered\n// output #2: completed code\nmsg.payload = out;\nreturn [\n    key ? msg : {payload: \"\"},\n    out ? msg : null\n];",
+        "func": "var key = msg.payload;\nvar out = context.get(\"code\") || \"\";\nvar send = false;\n\nif (key === \"#\") {\n    key = \"\"; // send code\n    send = true;\n}\nelse if (key === \"*\") {\n    key = \"\"; // reset code\n    out = \"\";\n}\nelse if (!isNaN(+key)) {\n    out += key; // append key\n}\ncontext.set(\"code\", key ? out : undefined);\n\n// output #1: keys entered\n// output #2: completed code\nmsg.payload = out;\nreturn [\n    key ? msg : {payload: \"\"},\n    send ? msg : null\n];",
         "outputs": 2,
         "noerr": 0,
-        "x": 650,
-        "y": 420,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 160,
         "wires": [
             [
-                "f99d83cc.b54df"
+                "f99d83cc.b54df",
+                "3fd102daf6ff4686"
             ],
             [
-                "abbb2a40.b43368"
+                "abbb2a40.b43368",
+                "5949b815ac7f64dd"
             ]
         ],
         "outputLabels": [
@@ -556,12 +691,513 @@
         "g": "53497c9abd8bb944",
         "name": "code entered",
         "active": true,
-        "tosidebar": false,
+        "tosidebar": true,
         "console": false,
         "tostatus": true,
-        "complete": "payload",
-        "x": 690,
-        "y": 480,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "msg",
+        "x": 610,
+        "y": 200,
         "wires": []
+    },
+    {
+        "id": "3fd102daf6ff4686",
+        "type": "debug",
+        "z": "2352537bc9428508",
+        "g": "53497c9abd8bb944",
+        "name": "keys pressed",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "msg",
+        "x": 610,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "fb2c3c73fe49f236",
+        "type": "inject",
+        "z": "2352537bc9428508",
+        "g": "53497c9abd8bb944",
+        "name": "Limpia pulsaciones",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "*",
+        "payloadType": "str",
+        "x": 350,
+        "y": 260,
+        "wires": [
+            [
+                "49d71834.096548"
+            ]
+        ]
+    },
+    {
+        "id": "5949b815ac7f64dd",
+        "type": "switch",
+        "z": "2352537bc9428508",
+        "g": "f00a6ab86a2597c6",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "941941",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 230,
+        "y": 420,
+        "wires": [
+            [
+                "1a7748e2931bdee0",
+                "0e8e30bf946cc9b6"
+            ],
+            [
+                "1d05bbc77848e7f7"
+            ]
+        ]
+    },
+    {
+        "id": "48655d5777553db3",
+        "type": "ui_toast",
+        "z": "2352537bc9428508",
+        "g": "f00a6ab86a2597c6",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "red",
+        "sendall": false,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 610,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "1d05bbc77848e7f7",
+        "type": "change",
+        "z": "2352537bc9428508",
+        "g": "f00a6ab86a2597c6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "CONTRASEÑA INCORRECTA",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 440,
+        "wires": [
+            [
+                "48655d5777553db3"
+            ]
+        ]
+    },
+    {
+        "id": "dade04e06ae2cee3",
+        "type": "ui_ui_control",
+        "z": "2352537bc9428508",
+        "g": "f00a6ab86a2597c6",
+        "name": "",
+        "events": "change",
+        "x": 640,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1a7748e2931bdee0",
+        "type": "change",
+        "z": "2352537bc9428508",
+        "g": "f00a6ab86a2597c6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"enable\":[\"Temperatura\",\"CPU\",\"Salir\"],\"show\":[\"Temperatura\",\"CPU\",\"Salir\"],\"hide\":\"Button_Panel\",\"disable\":\"Button_Panel\"},\"group\":{\"show\":[\"CPU_Raspberry\",\"Temperatura_Home\",\"Salir_Exit\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 400,
+        "wires": [
+            [
+                "dade04e06ae2cee3"
+            ]
+        ]
+    },
+    {
+        "id": "0e8e30bf946cc9b6",
+        "type": "change",
+        "z": "2352537bc9428508",
+        "g": "f00a6ab86a2597c6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "+1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 360,
+        "wires": [
+            [
+                "5c789da27e3dbf77"
+            ]
+        ]
+    },
+    {
+        "id": "5c789da27e3dbf77",
+        "type": "delay",
+        "z": "2352537bc9428508",
+        "g": "f00a6ab86a2597c6",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 590,
+        "y": 360,
+        "wires": [
+            [
+                "dade04e06ae2cee3"
+            ]
+        ]
+    },
+    {
+        "id": "bd4dc346747a750c",
+        "type": "mqtt in",
+        "z": "2352537bc9428508",
+        "g": "b2fc27ff784f01f7",
+        "name": "",
+        "topic": "casa/raspberrypi3/Temperatura",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "12869ceda2bb695f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 660,
+        "wires": [
+            [
+                "bc7860167cfe162a",
+                "650f185550fe0ba8"
+            ]
+        ]
+    },
+    {
+        "id": "a2db8eb812864f1a",
+        "type": "mqtt in",
+        "z": "2352537bc9428508",
+        "g": "b2fc27ff784f01f7",
+        "name": "",
+        "topic": "casa/raspberrypi3/CPU",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "12869ceda2bb695f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 720,
+        "wires": [
+            [
+                "c046541ae1d08348",
+                "941bbe3ced196876"
+            ]
+        ]
+    },
+    {
+        "id": "beda49c6852b6a19",
+        "type": "ui_button",
+        "z": "2352537bc9428508",
+        "g": "b2fc27ff784f01f7",
+        "name": "",
+        "group": "af6301dfb8f3cde3",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Exit",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 90,
+        "y": 580,
+        "wires": [
+            [
+                "9a17e4f2fada4933",
+                "57b51ea035dc0916"
+            ]
+        ]
+    },
+    {
+        "id": "9a17e4f2fada4933",
+        "type": "change",
+        "z": "2352537bc9428508",
+        "g": "b2fc27ff784f01f7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"disable\":[\"Temperatura\",\"CPU\",\"Salir\"],\"hide\":[\"Temperatura\",\"CPU\",\"Salir\"],\"enable\":\"Button_Panel\",\"show\":\"Button_Panel\"},\"group\":{\"hide\":[\"CPU_Raspberry\",\"Temperatura_Home\",\"Salir_Exit\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 290,
+        "y": 580,
+        "wires": [
+            [
+                "dade04e06ae2cee3"
+            ]
+        ]
+    },
+    {
+        "id": "57b51ea035dc0916",
+        "type": "change",
+        "z": "2352537bc9428508",
+        "g": "b2fc27ff784f01f7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "+1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 540,
+        "wires": [
+            [
+                "8742013246bfab5d"
+            ]
+        ]
+    },
+    {
+        "id": "8742013246bfab5d",
+        "type": "delay",
+        "z": "2352537bc9428508",
+        "g": "b2fc27ff784f01f7",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 410,
+        "y": 540,
+        "wires": [
+            [
+                "dade04e06ae2cee3"
+            ]
+        ]
+    },
+    {
+        "id": "650f185550fe0ba8",
+        "type": "ui_chart",
+        "z": "2352537bc9428508",
+        "g": "b2fc27ff784f01f7",
+        "name": "",
+        "group": "7a45d1ee681c2eb1",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 410,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "941bbe3ced196876",
+        "type": "ui_chart",
+        "z": "2352537bc9428508",
+        "g": "b2fc27ff784f01f7",
+        "name": "",
+        "group": "6974c20bef22822c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 410,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d1f2f68e7b51efb",
+        "type": "inject",
+        "z": "2352537bc9428508",
+        "g": "b2fc27ff784f01f7",
+        "name": "Oculta en inicio",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 620,
+        "wires": [
+            [
+                "9a17e4f2fada4933"
+            ]
+        ]
     }
 ]
