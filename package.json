@@ -1,0 +1,12 @@
+{
+    "name": "demo_webapp_dashboard",
+    "description": "Webapp para movil con Dasboard",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "flow.json",
+            "credentialsFile": "flow_cred.json"
+        }
+    }
+}
