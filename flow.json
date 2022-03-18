@@ -1,1 +1,567 @@
-[]
+[
+    {
+        "id": "2352537bc9428508",
+        "type": "tab",
+        "label": "Web App Movil",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "53497c9abd8bb944",
+        "type": "group",
+        "z": "2352537bc9428508",
+        "name": "PIN Access",
+        "style": {
+            "label": true,
+            "fill": "#ffbfbf"
+        },
+        "nodes": [
+            "7d92dedf.5c1b3",
+            "39cd572c.1e4138",
+            "d9986fc8.49167",
+            "513389a4.589638",
+            "2a464b8b.558314",
+            "2de88430.b7864c",
+            "1f5853d8.36dbdc",
+            "76ea846e.bfbe4c",
+            "b92fbf33.e21cc",
+            "e167bcb5.de23",
+            "54f95096.51461",
+            "3569b378.05d7ac",
+            "f99d83cc.b54df",
+            "49d71834.096548",
+            "abbb2a40.b43368"
+        ],
+        "x": 114,
+        "y": 319,
+        "w": 692,
+        "h": 202
+    },
+    {
+        "id": "42215532dc65ce87",
+        "type": "ui_tab",
+        "name": "CPU",
+        "icon": "computer",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1466bdc5ae19116f",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Webapp Demo",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "6974c20bef22822c",
+        "type": "ui_group",
+        "name": "Raspberry",
+        "tab": "42215532dc65ce87",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cc0599d5b9eeb5a5",
+        "type": "ui_tab",
+        "name": "Temperatura",
+        "icon": "fa-thermometer-full",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7a45d1ee681c2eb1",
+        "type": "ui_group",
+        "name": "Home",
+        "tab": "cc0599d5b9eeb5a5",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d4851ecc.b4b53",
+        "type": "ui_group",
+        "name": "Keypad",
+        "tab": "f71dee08.232e9",
+        "order": 5,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "f71dee08.232e9",
+        "type": "ui_tab",
+        "name": "Button Panel",
+        "icon": "dashboard"
+    },
+    {
+        "id": "c046541ae1d08348",
+        "type": "ui_gauge",
+        "z": "2352537bc9428508",
+        "name": "",
+        "group": "6974c20bef22822c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 530,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "bc7860167cfe162a",
+        "type": "ui_gauge",
+        "z": "2352537bc9428508",
+        "name": "",
+        "group": "7a45d1ee681c2eb1",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 530,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "7d92dedf.5c1b3",
+        "type": "ui_template",
+        "z": "2352537bc9428508",
+        "g": "53497c9abd8bb944",
+        "group": "d4851ecc.b4b53",
+        "name": "Key 1",
+        "order": 1,
+        "width": "2",
+        "height": "2",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '1' })\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-1\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">1</text>\n </g>\n</svg>\n</md-button>\n",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 190,
+        "y": 360,
+        "wires": [
+            [
+                "49d71834.096548"
+            ]
+        ]
+    },
+    {
+        "id": "39cd572c.1e4138",
+        "type": "ui_template",
+        "z": "2352537bc9428508",
+        "g": "53497c9abd8bb944",
+        "group": "d4851ecc.b4b53",
+        "name": "Key 6",
+        "order": 6,
+        "width": "2",
+        "height": "2",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '6'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-6\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">6</text>\n </g>\n</svg>\n</md-button>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 470,
+        "y": 400,
+        "wires": [
+            [
+                "49d71834.096548"
+            ]
+        ]
+    },
+    {
+        "id": "d9986fc8.49167",
+        "type": "ui_template",
+        "z": "2352537bc9428508",
+        "g": "53497c9abd8bb944",
+        "group": "d4851ecc.b4b53",
+        "name": "Key 3",
+        "order": 3,
+        "width": "2",
+        "height": "2",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '3' })\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-3\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">3</text>\n </g>\n</svg>\n</md-button>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 470,
+        "y": 360,
+        "wires": [
+            [
+                "49d71834.096548"
+            ]
+        ]
+    },
+    {
+        "id": "513389a4.589638",
+        "type": "ui_template",
+        "z": "2352537bc9428508",
+        "g": "53497c9abd8bb944",
+        "group": "d4851ecc.b4b53",
+        "name": "Key 4",
+        "order": 4,
+        "width": "2",
+        "height": "2",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '4'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-4\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">4</text>\n </g>\n</svg>\n</md-button>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 190,
+        "y": 400,
+        "wires": [
+            [
+                "49d71834.096548"
+            ]
+        ]
+    },
+    {
+        "id": "2a464b8b.558314",
+        "type": "ui_template",
+        "z": "2352537bc9428508",
+        "g": "53497c9abd8bb944",
+        "group": "d4851ecc.b4b53",
+        "name": "Key 5",
+        "order": 5,
+        "width": "2",
+        "height": "2",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '5'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-5\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">5</text>\n </g>\n</svg>\n</md-button>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 330,
+        "y": 400,
+        "wires": [
+            [
+                "49d71834.096548"
+            ]
+        ]
+    },
+    {
+        "id": "2de88430.b7864c",
+        "type": "ui_template",
+        "z": "2352537bc9428508",
+        "g": "53497c9abd8bb944",
+        "group": "d4851ecc.b4b53",
+        "name": "Key 7",
+        "order": 7,
+        "width": "2",
+        "height": "2",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '7'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-7\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">7</text>\n </g>\n</svg>\n</md-button>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 190,
+        "y": 440,
+        "wires": [
+            [
+                "49d71834.096548"
+            ]
+        ]
+    },
+    {
+        "id": "1f5853d8.36dbdc",
+        "type": "ui_template",
+        "z": "2352537bc9428508",
+        "g": "53497c9abd8bb944",
+        "group": "d4851ecc.b4b53",
+        "name": "Key 2",
+        "order": 2,
+        "width": "2",
+        "height": "2",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '2' })\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-2\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">2</text>\n </g>\n</svg>\n</md-button>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 330,
+        "y": 360,
+        "wires": [
+            [
+                "49d71834.096548"
+            ]
+        ]
+    },
+    {
+        "id": "76ea846e.bfbe4c",
+        "type": "ui_template",
+        "z": "2352537bc9428508",
+        "g": "53497c9abd8bb944",
+        "group": "d4851ecc.b4b53",
+        "name": "Key 8",
+        "order": 8,
+        "width": "2",
+        "height": "2",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '8'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-8\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">8</text>\n </g>\n</svg>\n</md-button>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 330,
+        "y": 440,
+        "wires": [
+            [
+                "49d71834.096548"
+            ]
+        ]
+    },
+    {
+        "id": "b92fbf33.e21cc",
+        "type": "ui_template",
+        "z": "2352537bc9428508",
+        "g": "53497c9abd8bb944",
+        "group": "d4851ecc.b4b53",
+        "name": "Key 9",
+        "order": 9,
+        "width": "2",
+        "height": "2",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '9'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-9\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">9</text>\n </g>\n</svg>\n</md-button>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 470,
+        "y": 440,
+        "wires": [
+            [
+                "49d71834.096548"
+            ]
+        ]
+    },
+    {
+        "id": "e167bcb5.de23",
+        "type": "ui_template",
+        "z": "2352537bc9428508",
+        "g": "53497c9abd8bb944",
+        "group": "d4851ecc.b4b53",
+        "name": "Key *",
+        "order": 10,
+        "width": "2",
+        "height": "2",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '*'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-Reset\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\">\n    <title>Reset</title>\n  </rect>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"50\" y=\"250\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 250px; font-family: Arial;\">*</text>\n </g>\n</svg>\n</md-button>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 190,
+        "y": 480,
+        "wires": [
+            [
+                "49d71834.096548"
+            ]
+        ]
+    },
+    {
+        "id": "54f95096.51461",
+        "type": "ui_template",
+        "z": "2352537bc9428508",
+        "g": "53497c9abd8bb944",
+        "group": "d4851ecc.b4b53",
+        "name": "Key 0",
+        "order": 11,
+        "width": "2",
+        "height": "2",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '0'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-0\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\"/>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">0</text>\n </g>\n</svg>\n</md-button>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 330,
+        "y": 480,
+        "wires": [
+            [
+                "49d71834.096548"
+            ]
+        ]
+    },
+    {
+        "id": "3569b378.05d7ac",
+        "type": "ui_template",
+        "z": "2352537bc9428508",
+        "g": "53497c9abd8bb944",
+        "group": "d4851ecc.b4b53",
+        "name": "Key #",
+        "order": 12,
+        "width": "2",
+        "height": "2",
+        "format": "<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#333333\" ng-click=\"send({payload: '#'})\"> \n<svg width=\"105px\" height=\"105px\" version=\"1.1\" viewBox=\"0 0 200 200\">\n <g id=\"Key-Enter\">\n  <rect fill=\"#4D4D4D\" width=\"200\" height=\"200\" rx=\"12\" ry=\"12\">\n    <title>Enter</title>\n  </rect>\n  <path fill=\"none\" stroke=\"#B3B3B3\" stroke-width=\"7.99957\" d=\"M6 194c-1,-1 -2,-3 -2,-6l0 -176c0,-4 4,-8 8,-8l176 0c2,0 4,1 6,2\"/>\n  <path fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"7.99957\" d=\"M194 6c1,1 2,3 2,6l0 176c0,4 -4,8 -8,8l-176 0c-2,0 -4,-1 -6,-2\"/>\n  <text x=\"59\" y=\"153\" style=\"fill: #E6E6E6; font-weight: normal; font-size: 150px; font-family: Arial;\">#</text>\n </g>\n</svg>\n</md-button>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 470,
+        "y": 480,
+        "wires": [
+            [
+                "49d71834.096548"
+            ]
+        ]
+    },
+    {
+        "id": "f99d83cc.b54df",
+        "type": "ui_text",
+        "z": "2352537bc9428508",
+        "g": "53497c9abd8bb944",
+        "group": "d4851ecc.b4b53",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "name": "keys pressed",
+        "label": "Number:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 690,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "49d71834.096548",
+        "type": "function",
+        "z": "2352537bc9428508",
+        "g": "53497c9abd8bb944",
+        "name": "code entry",
+        "func": "var key = msg.payload;\nvar out = context.get(\"code\") || \"\";\n\nif (key === \"#\") {\n    key = \"\"; // send code\n}\nelse if (key === \"*\") {\n    key = \"\"; // reset code\n    out = \"\";\n}\nelse if (!isNaN(+key)) {\n    out += key; // append key\n}\ncontext.set(\"code\", key ? out : undefined);\n\n// output #1: keys entered\n// output #2: completed code\nmsg.payload = out;\nreturn [\n    key ? msg : {payload: \"\"},\n    out ? msg : null\n];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 650,
+        "y": 420,
+        "wires": [
+            [
+                "f99d83cc.b54df"
+            ],
+            [
+                "abbb2a40.b43368"
+            ]
+        ],
+        "outputLabels": [
+            "last key number",
+            "completed code"
+        ]
+    },
+    {
+        "id": "abbb2a40.b43368",
+        "type": "debug",
+        "z": "2352537bc9428508",
+        "g": "53497c9abd8bb944",
+        "name": "code entered",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "x": 690,
+        "y": 480,
+        "wires": []
+    }
+]
