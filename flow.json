@@ -83,12 +83,17 @@
             "8742013246bfab5d",
             "650f185550fe0ba8",
             "941bbe3ced196876",
-            "3d1f2f68e7b51efb"
+            "3d1f2f68e7b51efb",
+            "9ad96a2a974aaca5",
+            "6aa5a4f1ff5ce373",
+            "293208800a134d0e",
+            "f4ac925bfb25be14",
+            "ae927fc5363da5b3"
         ],
-        "x": 14,
-        "y": 499,
-        "w": 492,
-        "h": 282
+        "x": 34,
+        "y": 519,
+        "w": 652,
+        "h": 322
     },
     {
         "id": "42215532dc65ce87",
@@ -316,8 +321,8 @@
         "seg1": "50",
         "seg2": "75",
         "className": "",
-        "x": 410,
-        "y": 700,
+        "x": 550,
+        "y": 760,
         "wires": []
     },
     {
@@ -344,8 +349,8 @@
         "seg1": "40",
         "seg2": "60",
         "className": "",
-        "x": 410,
-        "y": 620,
+        "x": 550,
+        "y": 640,
         "wires": []
     },
     {
@@ -772,7 +777,9 @@
         "wires": [
             [
                 "1a7748e2931bdee0",
-                "0e8e30bf946cc9b6"
+                "0e8e30bf946cc9b6",
+                "6aa5a4f1ff5ce373",
+                "9ad96a2a974aaca5"
             ],
             [
                 "1d05bbc77848e7f7"
@@ -928,20 +935,21 @@
         "z": "2352537bc9428508",
         "g": "b2fc27ff784f01f7",
         "name": "",
-        "topic": "casa/raspberrypi3/Temperatura",
+        "topic": "",
         "qos": "2",
         "datatype": "auto",
         "broker": "12869ceda2bb695f",
         "nl": false,
         "rap": true,
         "rh": 0,
-        "inputs": 0,
-        "x": 190,
-        "y": 660,
+        "inputs": 1,
+        "x": 370,
+        "y": 680,
         "wires": [
             [
                 "bc7860167cfe162a",
-                "650f185550fe0ba8"
+                "650f185550fe0ba8",
+                "ae927fc5363da5b3"
             ]
         ]
     },
@@ -951,20 +959,21 @@
         "z": "2352537bc9428508",
         "g": "b2fc27ff784f01f7",
         "name": "",
-        "topic": "casa/raspberrypi3/CPU",
+        "topic": "",
         "qos": "2",
         "datatype": "auto",
         "broker": "12869ceda2bb695f",
         "nl": false,
         "rap": true,
         "rh": 0,
-        "inputs": 0,
-        "x": 160,
-        "y": 720,
+        "inputs": 1,
+        "x": 370,
+        "y": 760,
         "wires": [
             [
                 "c046541ae1d08348",
-                "941bbe3ced196876"
+                "941bbe3ced196876",
+                "ae927fc5363da5b3"
             ]
         ]
     },
@@ -989,12 +998,14 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 90,
-        "y": 580,
+        "x": 270,
+        "y": 600,
         "wires": [
             [
                 "9a17e4f2fada4933",
-                "57b51ea035dc0916"
+                "57b51ea035dc0916",
+                "293208800a134d0e",
+                "f4ac925bfb25be14"
             ]
         ]
     },
@@ -1018,8 +1029,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 290,
-        "y": 580,
+        "x": 470,
+        "y": 600,
         "wires": [
             [
                 "dade04e06ae2cee3"
@@ -1046,8 +1057,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 230,
-        "y": 540,
+        "x": 410,
+        "y": 560,
         "wires": [
             [
                 "8742013246bfab5d"
@@ -1072,8 +1083,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 410,
-        "y": 540,
+        "x": 590,
+        "y": 560,
         "wires": [
             [
                 "dade04e06ae2cee3"
@@ -1119,8 +1130,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 410,
-        "y": 660,
+        "x": 550,
+        "y": 680,
         "wires": [
             []
         ]
@@ -1164,8 +1175,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 410,
-        "y": 740,
+        "x": 550,
+        "y": 800,
         "wires": [
             []
         ]
@@ -1192,11 +1203,168 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
-        "y": 620,
+        "x": 300,
+        "y": 640,
         "wires": [
             [
                 "9a17e4f2fada4933"
+            ]
+        ]
+    },
+    {
+        "id": "6aa5a4f1ff5ce373",
+        "type": "change",
+        "z": "2352537bc9428508",
+        "g": "b2fc27ff784f01f7",
+        "name": "Subscribe Temperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "subscribe",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "casa/raspberrypi3/Temperatura",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 170,
+        "y": 680,
+        "wires": [
+            [
+                "bd4dc346747a750c"
+            ]
+        ]
+    },
+    {
+        "id": "9ad96a2a974aaca5",
+        "type": "change",
+        "z": "2352537bc9428508",
+        "g": "b2fc27ff784f01f7",
+        "name": "Subscribe CPU",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "subscribe",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "casa/raspberrypi3/CPU",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 760,
+        "wires": [
+            [
+                "a2db8eb812864f1a"
+            ]
+        ]
+    },
+    {
+        "id": "ae927fc5363da5b3",
+        "type": "debug",
+        "z": "2352537bc9428508",
+        "g": "b2fc27ff784f01f7",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "293208800a134d0e",
+        "type": "change",
+        "z": "2352537bc9428508",
+        "g": "b2fc27ff784f01f7",
+        "name": "Unsubscribe Temperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "unsubscribe",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "casa/raspberrypi3/Temperatura",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 170,
+        "y": 720,
+        "wires": [
+            [
+                "bd4dc346747a750c"
+            ]
+        ]
+    },
+    {
+        "id": "f4ac925bfb25be14",
+        "type": "change",
+        "z": "2352537bc9428508",
+        "g": "b2fc27ff784f01f7",
+        "name": "Unsubscribe Temperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "unsubscribe",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "casa/raspberrypi3/CPU",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 170,
+        "y": 800,
+        "wires": [
+            [
+                "a2db8eb812864f1a"
             ]
         ]
     }
