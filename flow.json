@@ -58,7 +58,7 @@
             "0e8e30bf946cc9b6",
             "5c789da27e3dbf77"
         ],
-        "x": 154,
+        "x": 34,
         "y": 319,
         "w": 572,
         "h": 162
@@ -88,12 +88,35 @@
             "6aa5a4f1ff5ce373",
             "293208800a134d0e",
             "f4ac925bfb25be14",
-            "ae927fc5363da5b3"
+            "ae927fc5363da5b3",
+            "7570510068491e90",
+            "b477272e61a66b52"
         ],
         "x": 34,
-        "y": 519,
+        "y": 719,
         "w": 652,
-        "h": 322
+        "h": 382
+    },
+    {
+        "id": "24531aa73b209ec5",
+        "type": "group",
+        "z": "2352537bc9428508",
+        "name": "Gestion de sesiones activas",
+        "style": {
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "845d0cca4c1a4b72",
+            "9d41fe89deca8f46",
+            "2a4471d0707ce80e",
+            "5e47cd75b4dd51fd",
+            "988e2fbf4ff68a5e"
+        ],
+        "x": 214,
+        "y": 519,
+        "w": 592,
+        "h": 162
     },
     {
         "id": "42215532dc65ce87",
@@ -282,7 +305,7 @@
         "type": "ui_tab",
         "name": "Salir",
         "icon": "exit_to_app",
-        "order": 4,
+        "order": 5,
         "disabled": true,
         "hidden": true
     },
@@ -293,6 +316,26 @@
         "tab": "170034691a8d544e",
         "order": 1,
         "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2fabcf8280df47ef",
+        "type": "ui_tab",
+        "name": "Light Control",
+        "icon": "fa-lightbulb-o",
+        "order": 4,
+        "disabled": true,
+        "hidden": true
+    },
+    {
+        "id": "f3d5ba6ccdbe72d4",
+        "type": "ui_group",
+        "name": "Home Lamp",
+        "tab": "2fabcf8280df47ef",
+        "order": 1,
+        "disp": true,
         "width": "6",
         "collapse": false,
         "className": ""
@@ -322,7 +365,7 @@
         "seg2": "75",
         "className": "",
         "x": 550,
-        "y": 760,
+        "y": 960,
         "wires": []
     },
     {
@@ -350,7 +393,7 @@
         "seg2": "60",
         "className": "",
         "x": 550,
-        "y": 640,
+        "y": 840,
         "wires": []
     },
     {
@@ -772,14 +815,16 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 230,
+        "x": 110,
         "y": 420,
         "wires": [
             [
                 "1a7748e2931bdee0",
                 "0e8e30bf946cc9b6",
                 "6aa5a4f1ff5ce373",
-                "9ad96a2a974aaca5"
+                "9ad96a2a974aaca5",
+                "845d0cca4c1a4b72",
+                "2a4471d0707ce80e"
             ],
             [
                 "1d05bbc77848e7f7"
@@ -802,7 +847,7 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 610,
+        "x": 490,
         "y": 440,
         "wires": []
     },
@@ -826,7 +871,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 410,
+        "x": 290,
         "y": 440,
         "wires": [
             [
@@ -841,7 +886,7 @@
         "g": "f00a6ab86a2597c6",
         "name": "",
         "events": "change",
-        "x": 640,
+        "x": 520,
         "y": 400,
         "wires": [
             []
@@ -858,7 +903,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"tabs\":{\"enable\":[\"Temperatura\",\"CPU\",\"Salir\"],\"show\":[\"Temperatura\",\"CPU\",\"Salir\"],\"hide\":\"Button_Panel\",\"disable\":\"Button_Panel\"},\"group\":{\"show\":[\"CPU_Raspberry\",\"Temperatura_Home\",\"Salir_Exit\"]}}",
+                "to": "{\"tabs\":{\"enable\":[\"Temperatura\",\"CPU\",\"Salir\",\"Light_Control\"],\"show\":[\"Temperatura\",\"CPU\",\"Salir\",\"Light_Control\"],\"hide\":\"Button_Panel\",\"disable\":\"Button_Panel\"},\"group\":{\"show\":[\"CPU_Raspberry\",\"Temperatura_Home\",\"Salir_Exit\",\"Light_Control_Home_Lamp\"]}}",
                 "tot": "json"
             }
         ],
@@ -867,7 +912,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 410,
+        "x": 290,
         "y": 400,
         "wires": [
             [
@@ -895,7 +940,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 410,
+        "x": 290,
         "y": 360,
         "wires": [
             [
@@ -921,7 +966,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 590,
+        "x": 470,
         "y": 360,
         "wires": [
             [
@@ -944,7 +989,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 370,
-        "y": 680,
+        "y": 880,
         "wires": [
             [
                 "bc7860167cfe162a",
@@ -968,7 +1013,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 370,
-        "y": 760,
+        "y": 960,
         "wires": [
             [
                 "c046541ae1d08348",
@@ -987,7 +1032,7 @@
         "order": 1,
         "width": 0,
         "height": 0,
-        "passthru": false,
+        "passthru": true,
         "label": "Exit",
         "tooltip": "",
         "color": "",
@@ -999,13 +1044,14 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 270,
-        "y": 600,
+        "y": 800,
         "wires": [
             [
                 "9a17e4f2fada4933",
                 "57b51ea035dc0916",
                 "293208800a134d0e",
-                "f4ac925bfb25be14"
+                "f4ac925bfb25be14",
+                "9d41fe89deca8f46"
             ]
         ]
     },
@@ -1020,7 +1066,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"tabs\":{\"disable\":[\"Temperatura\",\"CPU\",\"Salir\"],\"hide\":[\"Temperatura\",\"CPU\",\"Salir\"],\"enable\":\"Button_Panel\",\"show\":\"Button_Panel\"},\"group\":{\"hide\":[\"CPU_Raspberry\",\"Temperatura_Home\",\"Salir_Exit\"]}}",
+                "to": "{\"tabs\":{\"disable\":[\"Temperatura\",\"CPU\",\"Salir\",\"Light_Control\"],\"hide\":[\"Temperatura\",\"CPU\",\"Salir\",\"Light_Control\"],\"enable\":\"Button_Panel\",\"show\":\"Button_Panel\"},\"group\":{\"hide\":[\"CPU_Raspberry\",\"Temperatura_Home\",\"Salir_Exit\",\"Light_Control_Home_Lamp\"]}}",
                 "tot": "json"
             }
         ],
@@ -1030,7 +1076,7 @@
         "to": "",
         "reg": false,
         "x": 470,
-        "y": 600,
+        "y": 800,
         "wires": [
             [
                 "dade04e06ae2cee3"
@@ -1058,7 +1104,7 @@
         "to": "",
         "reg": false,
         "x": 410,
-        "y": 560,
+        "y": 760,
         "wires": [
             [
                 "8742013246bfab5d"
@@ -1084,7 +1130,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 590,
-        "y": 560,
+        "y": 760,
         "wires": [
             [
                 "dade04e06ae2cee3"
@@ -1131,7 +1177,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 550,
-        "y": 680,
+        "y": 880,
         "wires": [
             []
         ]
@@ -1176,7 +1222,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 550,
-        "y": 800,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -1204,7 +1250,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 300,
-        "y": 640,
+        "y": 840,
         "wires": [
             [
                 "9a17e4f2fada4933"
@@ -1239,7 +1285,7 @@
         "to": "",
         "reg": false,
         "x": 170,
-        "y": 680,
+        "y": 880,
         "wires": [
             [
                 "bd4dc346747a750c"
@@ -1274,7 +1320,7 @@
         "to": "",
         "reg": false,
         "x": 140,
-        "y": 760,
+        "y": 960,
         "wires": [
             [
                 "a2db8eb812864f1a"
@@ -1287,7 +1333,7 @@
         "z": "2352537bc9428508",
         "g": "b2fc27ff784f01f7",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1295,7 +1341,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 510,
-        "y": 720,
+        "y": 920,
         "wires": []
     },
     {
@@ -1326,7 +1372,7 @@
         "to": "",
         "reg": false,
         "x": 170,
-        "y": 720,
+        "y": 920,
         "wires": [
             [
                 "bd4dc346747a750c"
@@ -1361,11 +1407,185 @@
         "to": "",
         "reg": false,
         "x": 170,
-        "y": 800,
+        "y": 1000,
         "wires": [
             [
                 "a2db8eb812864f1a"
             ]
+        ]
+    },
+    {
+        "id": "7570510068491e90",
+        "type": "inject",
+        "z": "2352537bc9428508",
+        "g": "b2fc27ff784f01f7",
+        "name": "Limpia gráficas",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "x": 300,
+        "y": 1060,
+        "wires": [
+            [
+                "650f185550fe0ba8",
+                "941bbe3ced196876"
+            ]
+        ]
+    },
+    {
+        "id": "b477272e61a66b52",
+        "type": "ui_switch",
+        "z": "2352537bc9428508",
+        "g": "b2fc27ff784f01f7",
+        "name": "",
+        "label": "Control",
+        "tooltip": "",
+        "group": "f3d5ba6ccdbe72d4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 540,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "845d0cca4c1a4b72",
+        "type": "function",
+        "z": "2352537bc9428508",
+        "g": "24531aa73b209ec5",
+        "name": "Añade el numero de sesión activa",
+        "func": "var new_session = msg.socketid;\nvar current_sessions = flow.get(\"sessions\",'file');\ncurrent_sessions.push(new_session);\nflow.set(\"sessions\", current_sessions, 'file');\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"sessions\",[],'file');",
+        "finalize": "// Code added here will be run when the\n// node is being stopped or re-deployed.\nflow.set(\"sessions\", [], 'file');",
+        "libs": [],
+        "x": 380,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9d41fe89deca8f46",
+        "type": "function",
+        "z": "2352537bc9428508",
+        "g": "24531aa73b209ec5",
+        "name": "Elimina sesión activa",
+        "func": "var del_session = msg.socketid;\nvar current_sessions = flow.get(\"sessions\", 'file');\n\ncurrent_sessions = current_sessions.filter(function (item) {\n    return item !== del_session\n});\n\nflow.set(\"sessions\", current_sessions, 'file');\n\n//Si está vacio reinicio el contador sino no mando nada\nif (current_sessions.length == 0){\n    msg.payload = \"cancel\";\n    msg.topic = \"control\";\n    return msg;\n}\nelse {\n    return;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 600,
+        "wires": [
+            [
+                "2a4471d0707ce80e"
+            ]
+        ]
+    },
+    {
+        "id": "2a4471d0707ce80e",
+        "type": "countdown",
+        "z": "2352537bc9428508",
+        "g": "24531aa73b209ec5",
+        "name": "",
+        "topic": "",
+        "payloadTimerStart": "true",
+        "payloadTimerStartType": "bool",
+        "payloadTimerStop": "false",
+        "payloadTimerStopType": "bool",
+        "timer": "30",
+        "resetWhileRunning": true,
+        "setTimeToNewWhileRunning": false,
+        "startCountdownOnControlMessage": false,
+        "minuteCounter": false,
+        "x": 310,
+        "y": 640,
+        "wires": [
+            [
+                "5e47cd75b4dd51fd"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "5e47cd75b4dd51fd",
+        "type": "switch",
+        "z": "2352537bc9428508",
+        "g": "24531aa73b209ec5",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 470,
+        "y": 640,
+        "wires": [
+            [
+                "988e2fbf4ff68a5e",
+                "beda49c6852b6a19"
+            ]
+        ]
+    },
+    {
+        "id": "988e2fbf4ff68a5e",
+        "type": "change",
+        "z": "2352537bc9428508",
+        "g": "24531aa73b209ec5",
+        "name": "Eliminr todas las sesiones",
+        "rules": [
+            {
+                "t": "set",
+                "p": "#:(file)::sessions",
+                "pt": "flow",
+                "to": "[]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 670,
+        "y": 640,
+        "wires": [
+            []
         ]
     }
 ]
