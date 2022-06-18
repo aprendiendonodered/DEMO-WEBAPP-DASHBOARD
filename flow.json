@@ -29,16 +29,14 @@
             "e167bcb5.de23",
             "54f95096.51461",
             "3569b378.05d7ac",
-            "f99d83cc.b54df",
             "49d71834.096548",
             "abbb2a40.b43368",
-            "3fd102daf6ff4686",
-            "fb2c3c73fe49f236"
+            "3fd102daf6ff4686"
         ],
         "x": 34,
-        "y": 19,
-        "w": 692,
-        "h": 282
+        "y": 59,
+        "w": 712,
+        "h": 202
     },
     {
         "id": "f00a6ab86a2597c6",
@@ -115,7 +113,7 @@
         ],
         "x": 214,
         "y": 519,
-        "w": 592,
+        "w": 612,
         "h": 162
     },
     {
@@ -685,31 +683,12 @@
         ]
     },
     {
-        "id": "f99d83cc.b54df",
-        "type": "ui_text",
-        "z": "2352537bc9428508",
-        "d": true,
-        "g": "53497c9abd8bb944",
-        "group": "d4851ecc.b4b53",
-        "order": 13,
-        "width": 0,
-        "height": 0,
-        "name": "keys pressed",
-        "label": "Number:",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 610,
-        "y": 60,
-        "wires": []
-    },
-    {
         "id": "49d71834.096548",
         "type": "function",
         "z": "2352537bc9428508",
         "g": "53497c9abd8bb944",
         "name": "code entry",
-        "func": "var key = msg.payload;\nvar out = context.get(\"code\") || \"\";\nvar send = false;\n\nif (key === \"#\") {\n    key = \"\"; // send code\n    send = true;\n}\nelse if (key === \"*\") {\n    key = \"\"; // reset code\n    out = \"\";\n}\nelse if (!isNaN(+key)) {\n    out += key; // append key\n}\ncontext.set(\"code\", key ? out : undefined);\n\n// output #1: keys entered\n// output #2: completed code\nmsg.payload = out;\nreturn [\n    key ? msg : {payload: \"\"},\n    send ? msg : null\n];",
+        "func": "var send = false; //flag envio al recibir #\nvar key = msg.payload;\nvar sesion = msg.socketid;\nvar out = flow.get(\"codigos\") || {};\nif (sesion in out === false){\n    out[sesion] = \"\";\n}\n\n//guardar fecha sesiones\nvar fechas = flow.get(\"fechas\") || {};\nfechas[sesion] = Date.now();\nflow.set(\"fechas\", fechas);\n\nif (key === \"#\") {\n    send = true; // send code\n    msg.payload = out[sesion];\n    delete out[sesion]; // reset code\n}\nelse if (key === \"*\") {\n    delete out[sesion]; // reset code\n}\nelse if (!isNaN(+key)) {\n    out[sesion] += key; // append key\n}\nflow.set(\"codigos\", out );\n\n// output #1: keys entered\n// output #2: completed code\n\nreturn [\n    send ? null : msg,\n    send ? msg : null\n];",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -719,7 +698,6 @@
         "y": 160,
         "wires": [
             [
-                "f99d83cc.b54df",
                 "3fd102daf6ff4686"
             ],
             [
@@ -746,8 +724,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "msg",
-        "x": 610,
-        "y": 200,
+        "x": 630,
+        "y": 220,
         "wires": []
     },
     {
@@ -756,7 +734,7 @@
         "z": "2352537bc9428508",
         "g": "53497c9abd8bb944",
         "name": "keys pressed",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
@@ -764,35 +742,9 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "msg",
-        "x": 610,
+        "x": 630,
         "y": 100,
         "wires": []
-    },
-    {
-        "id": "fb2c3c73fe49f236",
-        "type": "inject",
-        "z": "2352537bc9428508",
-        "g": "53497c9abd8bb944",
-        "name": "Limpia pulsaciones",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "*",
-        "payloadType": "str",
-        "x": 350,
-        "y": 260,
-        "wires": [
-            [
-                "49d71834.096548"
-            ]
-        ]
     },
     {
         "id": "5949b815ac7f64dd",
@@ -1523,7 +1475,7 @@
         "payloadTimerStartType": "bool",
         "payloadTimerStop": "false",
         "payloadTimerStopType": "bool",
-        "timer": "30",
+        "timer": "1800",
         "resetWhileRunning": true,
         "setTimeToNewWhileRunning": false,
         "startCountdownOnControlMessage": false,
@@ -1567,7 +1519,7 @@
         "type": "change",
         "z": "2352537bc9428508",
         "g": "24531aa73b209ec5",
-        "name": "Eliminr todas las sesiones",
+        "name": "Eliminar todas las sesiones",
         "rules": [
             {
                 "t": "set",
@@ -1582,7 +1534,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 670,
+        "x": 680,
         "y": 640,
         "wires": [
             []
