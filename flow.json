@@ -58,7 +58,7 @@
         ],
         "x": 34,
         "y": 319,
-        "w": 572,
+        "w": 592,
         "h": 162
     },
     {
@@ -92,7 +92,7 @@
         ],
         "x": 34,
         "y": 719,
-        "w": 652,
+        "w": 712,
         "h": 382
     },
     {
@@ -877,7 +877,7 @@
         "type": "change",
         "z": "2352537bc9428508",
         "g": "f00a6ab86a2597c6",
-        "name": "",
+        "name": "Mueve a la siguiente tab",
         "rules": [
             {
                 "t": "set",
@@ -892,7 +892,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 290,
+        "x": 320,
         "y": 360,
         "wires": [
             [
@@ -918,7 +918,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 470,
+        "x": 530,
         "y": 360,
         "wires": [
             [
@@ -1040,7 +1040,7 @@
         "type": "change",
         "z": "2352537bc9428508",
         "g": "b2fc27ff784f01f7",
-        "name": "",
+        "name": "Mueve a la siguiente tab",
         "rules": [
             {
                 "t": "set",
@@ -1055,7 +1055,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 410,
+        "x": 440,
         "y": 760,
         "wires": [
             [
@@ -1081,7 +1081,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 590,
+        "x": 650,
         "y": 760,
         "wires": [
             [
