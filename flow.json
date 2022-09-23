@@ -1420,7 +1420,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 560,
+        "x": 640,
         "y": 1060,
         "wires": [
             []
